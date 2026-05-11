@@ -1,5 +1,7 @@
 # SpringBot
 
+Why SpringBot? - https://vishwahiremath.github.io/sprintbot-intro/
+
 **SpringBot** is a high-performance, standalone CLI tool designed to scan Spring Boot repositories and generate a token-optimized "Semantic Map" in Markdown.
 
 When feeding large codebases into Large Language Models (LLMs) like GPT-4 or Gemini, raw source code often exhausts the context window. SpringBot solves this by using advanced AST parsing to extract only the critical architectural elements (Beans, Repositories, REST Endpoints, Data Entities, and Configuration) while ignoring method bodies and stripping fully-qualified package names to save tokens.
