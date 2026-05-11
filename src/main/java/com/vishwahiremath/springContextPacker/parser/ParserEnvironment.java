@@ -2,6 +2,7 @@ package com.vishwahiremath.springContextPacker.parser;
 
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.symbolsolver.JavaSymbolSolver;
+import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.CombinedTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.ReflectionTypeSolver;
@@ -33,5 +34,8 @@ public class ParserEnvironment {
         // Set up the SymbolSolver and configure StaticJavaParser
         JavaSymbolSolver symbolSolver = new JavaSymbolSolver(combinedTypeSolver);
         StaticJavaParser.getConfiguration().setSymbolResolver(symbolSolver);
+        
+        // Enable latest Java features (Records, Switch Expressions, Pattern Matching)
+        StaticJavaParser.getConfiguration().setLanguageLevel(ParserConfiguration.LanguageLevel.JAVA_17);
     }
 }
