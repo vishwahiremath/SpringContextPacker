@@ -4,6 +4,8 @@
 
 When feeding large codebases into Large Language Models (LLMs) like GPT-4 or Gemini, raw source code often exhausts the context window. SpringBot solves this by using advanced AST parsing to extract only the critical architectural elements (Beans, Repositories, REST Endpoints, Data Entities, and Configuration) while ignoring method bodies and stripping fully-qualified package names to save tokens.
 
+Official NPM Package : https://www.npmjs.com/package/springbot
+
 ---
 
 ## Key Features
